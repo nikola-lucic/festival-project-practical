@@ -39,7 +39,6 @@
 
         this.addMovieToProgram = function(movie) {
             this.listOfMovies.push(movie)
-            return this.listOfMovies;
         }
 
         this.getData = function() {
@@ -48,7 +47,7 @@
             var programDuration = this.movieDuration();
             var beginningOfProgram = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
 
-            var output = beginningOfProgram + "\n" + "program duration " + programDuration + " min\n";
+            var output = beginningOfProgram + "\n" + "Program duration " + programDuration + " min\n";
 
             movieList.forEach(function(movie) {
                 output += "\t\t" + movie.getMovieDate() + "\n";
@@ -65,7 +64,6 @@
 
         this.addProgramToFestival = function(program) {
             this.listOfPrograms.push(program)
-            return this.listOfPrograms;
         }
 
         this.movieNumberInProgram = function() {
@@ -83,12 +81,12 @@
             var listOfPrograms = this.listOfPrograms;
             var totalMovies = this.movieNumberInProgram()
 
-            var output = festivalName + festivalName + " has " + totalMovies + " movie titles\n"
+            var output = festivalName + " has " + totalMovies + " movie titles\n"
 
             listOfPrograms.forEach(function(program) {
                 output += program.getData();
             });
-            return output
+            return output;
         }
 
     }
